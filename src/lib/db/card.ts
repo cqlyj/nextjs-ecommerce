@@ -2,7 +2,7 @@ import { cookies } from "next/headers";
 import prisma from "./prisma";
 import { Cart, CartItem, Prisma } from "@prisma/client";
 import { get } from "http";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { authOptions } from "../../../utils/authOptions";
 import { getServerSession } from "next-auth";
 
 export type CartWithProducts = Prisma.CartGetPayload<{
